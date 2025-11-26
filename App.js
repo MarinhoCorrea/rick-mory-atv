@@ -9,19 +9,42 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName="CharactersList"
-        screenOptions={{ headerTitleAlign: 'center' }}
+        screenOptions={screenOptions}
       >
         <Stack.Screen
           name="CharactersList"
           component={CharactersListScreen}
-          options={{ title: 'Rick and Morty' }}
+          options={listScreenOptions}
         />
         <Stack.Screen
           name="CharacterDetail"
           component={CharacterDetailScreen}
-          options={{ title: 'Rick and Morty' }}
+          options={detailScreenOptions}
         />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+
+const screenOptions = {
+  headerTitleAlign: 'center',
+  headerStyle: {
+    backgroundColor: '#1a1a2e'
+  },
+  headerTintColor: '#97ce4c',
+  headerTitleStyle: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    textShadowColor: '#00d9ff',
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 8
+  }
+};
+
+const listScreenOptions = {
+  title: '🛸 Rick and Morty'
+};
+
+const detailScreenOptions = {
+  title: '👽 Detalhes'
+};

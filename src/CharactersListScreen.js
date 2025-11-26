@@ -25,9 +25,9 @@ export default function CharactersListScreen({ navigation }) {
   }, []);
 
   return (
-    <View style={{ flex: 1, padding: 20 }}>
+    <View style={styles.container}>
 
-      <Text style={{ fontSize: 22, fontWeight: "bold", marginBottom: 10 }}>
+      <Text style={styles.title}>
         Lista de Personagens
       </Text>
 
@@ -37,23 +37,16 @@ export default function CharactersListScreen({ navigation }) {
         renderItem={({ item }) => (
           <TouchableOpacity
             onPress={() => navigation.navigate("CharacterDetail", { personagem: item })}
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              backgroundColor: "#f2f2f2",
-              padding: 10,
-              borderRadius: 10,
-              marginBottom: 10
-            }}
+            style={styles.card}
           >
             <Image
               source={{ uri: item.image }}
-              style={{ width: 90, height: 90, borderRadius: 10, marginRight: 12 }}
+              style={styles.cardImage}
             />
 
             <View>
-              <Text style={{ fontSize: 18, fontWeight: "600" }}>{item.name}</Text>
-              <Text style={{ fontSize: 14 }}>Status: {item.status}</Text>
+              <Text style={styles.cardName}>{item.name}</Text>
+              <Text style={styles.cardStatus}>Status: {item.status}</Text>
             </View>
 
           </TouchableOpacity>
@@ -63,3 +56,49 @@ export default function CharactersListScreen({ navigation }) {
     </View>
   );
 }
+
+const styles = {
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: "#1a1a2e"
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: "bold",
+    marginBottom: 20,
+    color: "#97ce4c",
+    textAlign: "center",
+    textShadowColor: "#00d9ff",
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 10
+  },
+  card: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#16213e",
+    padding: 12,
+    borderRadius: 10,
+    marginBottom: 12,
+    borderWidth: 2,
+    borderColor: "#00d9ff"
+  },
+  cardImage: {
+    width: 90,
+    height: 90,
+    borderRadius: 10,
+    marginRight: 12,
+    borderWidth: 2,
+    borderColor: "#97ce4c"
+  },
+  cardName: {
+    fontSize: 18,
+    fontWeight: "600",
+    color: "#ffffff"
+  },
+  cardStatus: {
+    fontSize: 14,
+    color: "#00d9ff",
+    marginTop: 4
+  }
+};
