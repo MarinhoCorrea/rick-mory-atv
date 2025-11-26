@@ -46,7 +46,9 @@ export default function CharactersListScreen({ navigation }) {
 
             <View>
               <Text style={styles.cardName}>{item.name}</Text>
+              <Text style={styles.cardStatus}>Espécie: {item.species}</Text>
               <Text style={styles.cardStatus}>Status: {item.status}</Text>
+
             </View>
 
           </TouchableOpacity>
