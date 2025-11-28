@@ -25,6 +25,11 @@ export default function CharacterDetailScreen({ route }) {
         </Text>
 
         <Text style={styles.infoText}>
+          ⚧️ Genêro: <Text style={styles.highlightGreen}>{personagem.gender}</Text>
+        </Text>
+        
+
+        <Text style={styles.infoText}>
           🌍 Localização de Origem: <Text style={styles.highlightBlue}>{personagem.origin.name}</Text>
         </Text>
 
