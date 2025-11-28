@@ -12,8 +12,8 @@ Aplicativo Expo React Native que lista personagens da API "Rick and Morty" e mos
 ## Pré-requisitos
 - Node.js (recomenda-se v16+)
 - npm ou yarn
-- Expo CLI (opcional): `npm install -g expo-cli`
-- Emulador Android / Xcode ou dispositivo físico com app Expo Go
+- Expo CLI : `npm install -g expo-cli`
+- Emulador Android / Xcode ou dispositivo físico com app Expo Go (opcional)
 
 ## Instalação (Windows)
 1. Abra o terminal integrado do VS Code na pasta do projeto:
